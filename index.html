@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finanzas personales</title>
+<meta name="description" content="Aplicación personal para llevar ingresos, gastos, cuotas y metas de ahorro. Los datos viven en el computador de quien la usa.">
+<style>
+  /* Sin fuentes ni hojas de estilo externas a propósito: una página que
+     promete no compartir datos con nadie no debería pedirle una fuente a un
+     servidor ajeno cada vez que se abre. */
+  :root {
+    color-scheme: light dark;
+    --fondo: #e8ebe6;
+    --panel: #ffffff;
+    --texto: #0e0f0c;
+    --suave: #56594f;
+    --borde: #dce0d9;
+    --acento: #137a4d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #0e0f0c;
+      --panel: #171a14;
+      --texto: #f2f4ef;
+      --suave: #b3b8ac;
+      --borde: #2c3128;
+      --acento: #7bd39b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -.02em; margin: 0 0 6px; }
+  h2 { font-size: 1.1rem; font-weight: 700; margin: 34px 0 10px; }
+  .bajada { color: var(--suave); margin: 0 0 30px; font-size: 1.05rem; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 20px 22px;
+  }
+  ul { padding-left: 20px; margin: 10px 0; }
+  li { margin-bottom: 6px; }
+  a { color: var(--acento); font-weight: 600; }
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--borde);
+    color: var(--suave);
+    font-size: .88rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Finanzas personales</h1>
+  <p class="bajada">
+    Una aplicación hecha para llevar mis propias cuentas: lo que entra, lo que
+    sale, las cuotas y las metas de ahorro.
+  </p>
+
+  <div class="panel">
+    <p style="margin-top:0">
+      No es un servicio ni un producto. Es un programa que corre en mi
+      computador y guarda todo en un solo archivo, ahí mismo. No hay cuentas de
+      usuario, no hay servidor y no hay nadie más mirando.
+    </p>
+    <p style="margin-bottom:0">
+      Su idea de fondo es que <strong>nada se agrega solo</strong>: ningún gasto
+      aparece sin que yo lo confirme, y ninguna cifra se calcula a partir de algo
+      que no haya escrito.
+    </p>
+  </div>
+
+  <h2>Qué hace</h2>
+  <ul>
+    <li>Reparte lo que entra cada mes entre categorías, en porcentajes que yo defino.</li>
+    <li>Calcula cuánta plata queda por día para el gasto del día a día.</li>
+    <li>Lleva las compras en cuotas, las cuentas que se repiten y las metas de ahorro.</li>
+    <li>Avisa qué vence y cuándo.</li>
+  </ul>
+
+  <h2>Por qué pide permiso a Google</h2>
+  <p>
+    Opcionalmente, la aplicación puede mandar los pagos que tengo pendientes a
+    Google Tasks, para verlos en Google Calendar el día que vencen y poder
+    marcarlos como hechos desde el teléfono.
+  </p>
+  <p>
+    Ese permiso está apagado por defecto. Mientras no se active, la aplicación no
+    se comunica con ningún servidor. Los detalles están en la
+    <a href="privacidad.html">política de privacidad</a>.
+  </p>
+
+  <footer>
+    <a href="privacidad.html">Política de privacidad</a>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Finanzas personales</title>
+<meta name="description" content="Qué datos usa la aplicación Finanzas personales, dónde se guardan y qué hace con la información de Google.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --fondo: #e8ebe6;
+    --panel: #ffffff;
+    --texto: #0e0f0c;
+    --suave: #56594f;
+    --borde: #dce0d9;
+    --acento: #137a4d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #0e0f0c;
+      --panel: #171a14;
+      --texto: #f2f4ef;
+      --suave: #b3b8ac;
+      --borde: #2c3128;
+      --acento: #7bd39b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -.02em; margin: 0 0 4px; }
+  h2 { font-size: 1.05rem; font-weight: 700; margin: 32px 0 8px; }
+  .fecha { color: var(--suave); font-size: .9rem; margin: 0 0 28px; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  code {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: .88em;
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 1px 5px;
+  }
+  a { color: var(--acento); font-weight: 600; }
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--borde);
+    color: var(--suave);
+    font-size: .88rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de privacidad</h1>
+  <p class="fecha">Finanzas personales · actualizada el 4 de septiembre de 2026</p>
+
+  <p>
+    Finanzas personales es una aplicación de uso personal, escrita por su propio
+    usuario, que corre en su computador. No se ofrece como servicio, no tiene
+    servidores y no la usa nadie más.
+  </p>
+
+  <h2>Qué datos maneja y dónde quedan</h2>
+  <p>
+    Los datos financieros —ingresos, gastos, cuotas, metas de ahorro y las
+    categorías con que se ordenan— los escribe la persona que usa la aplicación
+    y se guardan en un único archivo de base de datos
+    (<code>datos/finanzas.db</code>) dentro de su propio computador.
+  </p>
+  <div class="panel">
+    <strong>Esa información no se transmite a ninguna parte.</strong> No hay
+    servidor propio, no hay servicios de análisis ni de publicidad, no se
+    comparte con terceros y no se vende.
+  </div>
+
+  <h2>Conexión con Google</h2>
+  <p>
+    La aplicación puede vincularse con la cuenta de Google de su usuario. Es
+    opcional y viene desactivada: mientras no se active, la aplicación no se
+    comunica con ningún servidor externo.
+  </p>
+  <p>Si se activa, se piden estos permisos y sólo estos:</p>
+  <ul>
+    <li>
+      <code>https://www.googleapis.com/auth/tasks</code> — para crear, actualizar
+      y leer tareas en una lista propia llamada <em>Finanzas</em>, donde aparecen
+      los pagos pendientes con su fecha de vencimiento.
+    </li>
+    <li>
+      <code>https://www.googleapis.com/auth/calendar.app.created</code> — para
+      crear un calendario propio y poner en él los ingresos que se esperan. Este
+      permiso da acceso <strong>únicamente a los calendarios que la propia
+      aplicación crea</strong>; no permite leer ni modificar el resto de la
+      agenda.
+    </li>
+  </ul>
+  <p>
+    Lo que se manda a Google es el concepto de cada compromiso, su monto y su
+    fecha. Lo que se lee de vuelta es si una de esas tareas quedó marcada como
+    hecha, para anotar el pago en la aplicación. No se lee ninguna otra
+    información de la cuenta.
+  </p>
+  <p>
+    El permiso de acceso que entrega Google se guarda en el mismo archivo local
+    de la base de datos, en el computador del usuario. No se envía a ningún otro
+    lugar.
+  </p>
+
+  <h2>Uso limitado de los datos de Google</h2>
+  <p>
+    El uso que esta aplicación hace de la información recibida de las API de
+    Google se ajusta a la
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noreferrer">Política
+    de Datos de Usuario de los Servicios de API de Google</a>, incluidos sus
+    requisitos de Uso Limitado. Los datos se usan sólo para mostrar y sincronizar
+    los pagos pendientes del propio usuario; no se transfieren a terceros, no se
+    usan con fines publicitarios y ninguna persona los lee.
+  </p>
+
+  <h2>Cómo quitar el acceso y borrar los datos</h2>
+  <ul>
+    <li>
+      Desde la aplicación: <em>Ajustes → Google Calendar → Desvincular</em>. Se
+      borra el permiso guardado y la aplicación deja de comunicarse con Google.
+    </li>
+    <li>
+      Desde la cuenta de Google:
+      <a href="https://myaccount.google.com/permissions" rel="noreferrer">myaccount.google.com/permissions</a>,
+      revocando el acceso de la aplicación.
+    </li>
+    <li>
+      Las tareas y el calendario que la aplicación haya creado se borran como
+      cualquier otro, desde Google Tasks y Google Calendar.
+    </li>
+    <li>
+      Los datos financieros se eliminan borrando el archivo de base de datos, o
+      desde <em>Ajustes → Empezar de nuevo</em>.
+    </li>
+  </ul>
+
+  <h2>Menores de edad</h2>
+  <p>
+    La aplicación no está dirigida a menores de 13 años y no recoge datos de
+    forma deliberada de ninguna persona distinta de su propio usuario.
+  </p>
+
+  <h2>Cambios</h2>
+  <p>
+    Si esta política cambia, la fecha del encabezado se actualiza. Los cambios
+    relevantes se reflejarán antes de pedir cualquier permiso nuevo.
+  </p>
+
+  <h2>Contacto</h2>
+  <p>
+    Por cualquier duda sobre esta política:
+    <a href="mailto:lilukas.gallardo@gmail.com">lilukas.gallardo@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="index.html">Volver a la portada</a>
+  </footer>
+</main>
+</body>
+</html>
