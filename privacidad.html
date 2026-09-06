@@ -67,7 +67,7 @@
 <body>
 <main>
   <h1>Política de privacidad</h1>
-  <p class="fecha">Finanzas personales · actualizada el 4 de septiembre de 2026</p>
+  <p class="fecha">Finanzas personales · actualizada el 5 de septiembre de 2026</p>
 
   <p>
     Finanzas personales es una aplicación de uso personal, escrita por su propio
@@ -83,9 +83,10 @@
     (<code>datos/finanzas.db</code>) dentro de su propio computador.
   </p>
   <div class="panel">
-    <strong>Esa información no se transmite a ninguna parte.</strong> No hay
-    servidor propio, no hay servicios de análisis ni de publicidad, no se
-    comparte con terceros y no se vende.
+    <strong>Esa información no sale del computador</strong>, salvo por la
+    conexión opcional con Google que se describe más abajo, y sólo si su usuario
+    la activa. No hay servidor propio, no hay servicios de análisis ni de
+    publicidad, no se comparte con terceros y no se vende.
   </div>
 
   <h2>Conexión con Google</h2>
@@ -119,6 +120,26 @@
     El permiso de acceso que entrega Google se guarda en el mismo archivo local
     de la base de datos, en el computador del usuario. No se envía a ningún otro
     lugar.
+  </p>
+
+  <h2>Asistente</h2>
+  <p>
+    La aplicación incluye un asistente que comenta las finanzas de su usuario.
+    El modelo de lenguaje corre <strong>en el mismo computador</strong>, mediante
+    <a href="https://ollama.com" rel="noreferrer">Ollama</a>, que su usuario
+    instala aparte. No hay servicio en la nube, no hay cuenta y no hay clave.
+  </p>
+  <p>
+    Cada pregunta arma un resumen del mes en curso —totales, reparto por
+    categorías, pagos pendientes, metas de ahorro y días de trabajo— y lo entrega
+    a ese programa local a través de la dirección
+    <code>127.0.0.1</code>, que por definición no sale de la máquina. Nada de
+    esto llega a un tercero. Las conversaciones no se guardan: se pierden al
+    cerrar la pantalla.
+  </p>
+  <p>
+    El asistente sólo lee. No puede modificar ningún dato de la aplicación, y no
+    da recomendaciones de inversión.
   </p>
 
   <h2>Uso limitado de los datos de Google</h2>
